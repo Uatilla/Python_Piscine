@@ -1,0 +1,29 @@
+# Virtual environments (works for Module_0/venv, Module_1/venv, etc.)
+**/venv/
+**/env/
+**/.venv/
+
+# Python cache
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Packaging (needed for ex09)
+**/dist/
+**/build/
+**/*.egg-info/
+
+# Editors and OS junk
+**/.DS_Store
+**/.vscode/
+**/.idea/
+**/*.swp
+
+# Testing
+**/.pytest_cache/
+**/.coverage
+**/htmlcov/
+
+# Project Subjects
+**/en.subject.pdf
