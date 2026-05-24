@@ -30,5 +30,4 @@ def test_ft_filter():
     print("All tests finished.")
 
 if __name__ == "__main__":
-    print(f" AaAAAAA: {ft_filter.__doc__}")
     test_ft_filter()

@@ -2,6 +2,7 @@ import os
 
 
 def ft_tqdm(lst: range) -> None:
+    """tqdm implementation that receives a range iterable and prints a bar loading."""
     try:
         columns = os.get_terminal_size().columns
     except OSError:

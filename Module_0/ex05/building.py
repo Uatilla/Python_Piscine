@@ -1,10 +1,10 @@
 import sys
-sys.tracebacklimit = 0
 
 
 def main():
     """Validate the input, raise errors when applicable prints the stats
     about the input received."""
+    sys.tracebacklimit = 0
     try:
         if (len(sys.argv) == 1):
             string = ""
