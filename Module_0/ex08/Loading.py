@@ -2,7 +2,8 @@ import os
 
 
 def ft_tqdm(lst: range) -> None:
-    """tqdm implementation that receives a range iterable and prints a bar loading."""
+    """tqdm implementation that receives a range
+    iterable and prints a bar loading."""
     try:
         columns = os.get_terminal_size().columns
     except OSError:
@@ -11,8 +12,8 @@ def ft_tqdm(lst: range) -> None:
     if total == 0:
         print("0it [00:00, ?it/s]")
         return
-    current = 0
     timing_space = 30
+    current_pos = 0
     for n in lst:
         current_pos += 1
         percentage = 100 * (current_pos / total)

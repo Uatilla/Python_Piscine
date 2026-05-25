@@ -1,6 +1,5 @@
 from ft_filter import ft_filter
 import sys
-sys.tracebacklimit = 0
 
 
 def processInput(wordList, size) -> None:
@@ -13,6 +12,7 @@ def processInput(wordList, size) -> None:
 def main() -> None:
     """Validate the input, raise errors when applicable prints the stats
     about the input received."""
+    sys.tracebacklimit = 0
     if len(sys.argv) != 3:
         raise AssertionError("the arguments are bad")
     try:

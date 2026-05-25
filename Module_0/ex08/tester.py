@@ -2,9 +2,11 @@ from time import sleep
 from tqdm import tqdm
 from Loading import ft_tqdm
 
+print("ft_tqdm:")
 for elem in ft_tqdm(range(500)):
     sleep(0.005)
 print()
+print("original tqdm:")
 for elem in tqdm(range(500)):
     sleep(0.005)
 print()
