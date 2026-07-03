@@ -5,7 +5,19 @@ def validation(
     checklist: list[int | float],
     lst_nm: str = "lst_nm"
 ) -> tuple[bool, str]:
-    """Validate the content of a list."""
+    """
+    Validate a list of numbers.
+
+    Checks if the list is non-empty, contains only numbers (int/float),
+    and all values are positive.
+
+    Args:
+        checklist (list[int | float]): List to validate.
+        lst_nm (str): Name of the list (used in error messages).
+
+    Returns:
+        tuple[bool, str]: (is_valid, error_message)
+    """
     if not checklist:
         return False, f"{lst_nm} cannot be empty."
 
@@ -20,7 +32,21 @@ def give_bmi(
     height: list[int | float],
     weight: list[int | float]
 ) -> list[int | float]:
-    """Calculate the BMI for each individual values from a list."""
+    """
+    Calculate BMI for each person given lists of heights and weights.
+
+    Formula: BMI = weight / (height ** 2)
+
+    Args:
+        height (list[int | float]): List of heights (in meters).
+        weight (list[int | float]): List of weights (in kg).
+
+    Returns:
+        list[float]: List of BMI values.
+
+    Raises:
+        ValueError: If lists have different lengths or contain invalid data.
+    """
     if len(height) != len(weight):
         raise ValueError("Height and Weight lists must have the same length.")
     for data, name in [(height, "Height"), (weight, "Weight")]:
@@ -33,7 +59,19 @@ def give_bmi(
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
-    """Return a list displaying which elements are under the limit."""
+    """
+    Check which BMI values exceed the given limit.
+
+    Args:
+        bmi (list[int | float]): List of BMI values.
+        limit (int): The threshold value.
+
+    Returns:
+        list[bool]: True for each BMI > limit, False otherwise.
+
+    Raises:
+        ValueError: If the BMI list contains invalid data.
+    """
     valid, error_msg = validation(bmi, "BMI")
     if not valid:
         raise ValueError(f"{error_msg}")

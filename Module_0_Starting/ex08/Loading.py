@@ -2,8 +2,21 @@ import os
 
 
 def ft_tqdm(lst: range) -> None:
-    """tqdm implementation that receives a range
-    iterable and prints a bar loading."""
+    """
+    Custom tqdm-like progress bar for an iterable (especially range).
+
+    Displays a dynamic progress bar in the terminal with percentage,
+    visual bar, and current/total count. Updates in place using carriage return.
+
+    Args:
+        lst (range): The iterable to iterate over (typically a range object).
+
+    Yields:
+        Elements from the input iterable one by one.
+
+    Note:
+        The progress bar adapts to current terminal width.
+    """
     try:
         columns = os.get_terminal_size().columns
     except OSError:

@@ -2,6 +2,7 @@
 from ft_filter import ft_filter   # or just paste the function if in same file
 
 def test_ft_filter():
+    """Run comprehensive tests comparing ft_filter with built-in filter."""
     tests = [
         # (function, iterable, description)
         (lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6], "Even numbers"),

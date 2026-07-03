@@ -2,7 +2,13 @@ import sys
 
 
 def get_morse_code() -> dict[str, str]:
-    """Return a dictionary mapping alphanumeric characters to Morse code."""
+    """
+    Return a dictionary mapping alphanumeric characters and space to Morse code.
+
+    Returns:
+        dict[str, str]: Mapping where keys are uppercase letters, digits,
+                        and space; values are their Morse code representations.
+    """
     return {
         'A': '.-',    'B': '-...',  'C': '-.-.', 'D': '-..',
         'E': '.',     'F': '..-.',  'G': '--.',  'H': '....',
@@ -19,15 +25,33 @@ def get_morse_code() -> dict[str, str]:
 
 
 def process_input(msg):
-    """Process each character from the message converting them into Morse
-    code, printing and the end."""
+    """
+    Convert a message to Morse code and print it.
+
+    Each character is translated to its Morse code equivalent.
+    Words are separated by spaces, and the full message is printed
+    as a single line with Morse symbols separated by spaces.
+
+    Args:
+        msg (str): The input message to convert.
+    """
     morse_msg: list[str] = [get_morse_code()[ch.upper()] for ch in msg]
     print(" ".join(morse_msg))
 
 
 def main() -> None:
-    """Validate the input, raise errors when applicable prints the stats
-    about the input received."""
+    """
+    Main entry point of the program.
+
+    Validates command line arguments and converts the input message
+    to Morse code.
+
+    Expected usage: python script.py "message here"
+
+    Raises:
+        AssertionError: If the number of arguments is wrong or if the
+                        message contains invalid characters.
+    """
     sys.tracebacklimit = 0
     try:
         if len(sys.argv) != 2 or not all(c.isalnum()

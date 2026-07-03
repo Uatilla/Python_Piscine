@@ -2,8 +2,15 @@ import sys
 
 
 def main():
-    """Validate the input, raise errors when applicable prints the stats
-    about the input received."""
+    """
+    Entry point of the program.
+
+    Handles command line arguments or interactive input.
+    Validates input and delegates processing to processMsg().
+
+    Raises:
+        AssertionError: If more than one argument is provided.
+    """
     sys.tracebacklimit = 0
     try:
         if (len(sys.argv) == 1):
@@ -21,7 +28,21 @@ def main():
 
 
 def processMsg(msg):
-    """Counts how much of each char type is present inside the input msg."""
+    """
+    Count and display statistics about character types in the given string.
+
+    Counts:
+        - Uppercase letters
+        - Lowercase letters
+        - Punctuation marks
+        - Spaces
+        - Digits
+
+    Args:
+        msg (str): The input text to analyze.
+
+    Prints the total character count and breakdown by category.
+    """
     stats = {"upper": 0, "lower": 0, "punct": 0, "spaces": 0, "digits": 0}
     for char in msg:
         if char.isupper():
