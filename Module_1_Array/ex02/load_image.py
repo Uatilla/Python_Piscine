@@ -7,13 +7,15 @@ def ft_load(path: str) -> np.ndarray:
     Load an image from the given path and return it as a NumPy RGB array.
 
     Supports JPG and JPEG formats as required by the exercise.
-    Prints the shape of the image in the format: "The shape of image is: (H, W, 3)"
+    Prints the shape of the image in the format:
+        "The shape of image is: (H, W, 3)"
 
     Args:
         path (str): Path to the image file.
 
     Returns:
-        np.ndarray: The image as a 3D NumPy array (height, width, 3) in RGB format.
+        np.ndarray: The image as a 3D NumPy array
+                    (height, width, 3) in RGB format.
                     Returns empty array on error.
 
     Raises / Prints:

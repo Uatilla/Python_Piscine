@@ -10,7 +10,7 @@ def ft_filter(function, iterable):
         iterable: Any iterable object (list, tuple, string, etc.).
 
     Returns:
-        list: A new list containing only the items where function(item) is True.
+        list: A new list containing the items where function(item) is True.
 
     Note:
         Unlike the built-in filter(), this returns a list (not an iterator).

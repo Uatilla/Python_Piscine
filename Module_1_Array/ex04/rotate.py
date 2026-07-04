@@ -14,9 +14,9 @@ def apply_gray_scale(image: np.ndarray) -> np.ndarray:
     return gray
 
 
-def zoom(path: str) -> np.ndarray:
+def rotate(path: str) -> np.ndarray:
     """
-    Load image, crop a region, convert to grayscale and display.
+    Load image, crop a region, convert to grayscale, rotate and display.
     """
     try:
         arr = ft_load(path)
@@ -29,10 +29,11 @@ def zoom(path: str) -> np.ndarray:
             print("Error: Sliced region is empty.")
             return np.ndarray([])
         gray = apply_gray_scale(slicedImage)
-        print(gray)
-        plt.imshow(gray, cmap='gray')
+        rotatedGray = gray.transpose(1, 0, 2)[::-1]
+        print(rotatedGray)
+        plt.imshow(rotatedGray, cmap='gray')
         plt.show()
-        return gray
+        return rotatedGray
     except Exception as e:
         print(f"Error: {e}")
 
@@ -41,7 +42,7 @@ def main():
     """
     Program entry point.
     """
-    zoom("animal.jpeg")
+    rotate("animal.jpeg")
 
 
 if __name__ == "__main__":

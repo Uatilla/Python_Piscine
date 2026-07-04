@@ -3,7 +3,7 @@ import sys
 
 def get_morse_code() -> dict[str, str]:
     """
-    Return a dictionary mapping alphanumeric characters and space to Morse code.
+    Return a dictionary mapping alphanum characters and space to Morse code.
 
     Returns:
         dict[str, str]: Mapping where keys are uppercase letters, digits,

@@ -6,7 +6,8 @@ def ft_tqdm(lst: range) -> None:
     Custom tqdm-like progress bar for an iterable (especially range).
 
     Displays a dynamic progress bar in the terminal with percentage,
-    visual bar, and current/total count. Updates in place using carriage return.
+    visual bar, and current/total count.
+    Updates in place using carriage return.
 
     Args:
         lst (range): The iterable to iterate over (typically a range object).
