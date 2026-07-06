@@ -3,20 +3,20 @@ import matplotlib.pyplot as plt
 from load_image import ft_load
 
 
-def apply_gray_scale(image: np.ndarray) -> np.ndarray:
+def apply_grey_scale(image: np.ndarray) -> np.ndarray:
     """
     Apply luminosity method into the image.
     """
-    gray = np.dot(image[..., :3], [0.2989, 0.5870, 0.1140])
-    gray = gray.astype(np.uint8)
-    gray = gray[:, :, np.newaxis]
-    print(f"New shape after slicing: {gray.shape} or {gray.shape[: 2]}")
-    return gray
+    grey = np.dot(image[..., :3], [0.2989, 0.5870, 0.1140])
+    grey = grey.astype(np.uint8)
+    grey = grey[:, :, np.newaxis]
+    print(f"New shape after slicing: {grey.shape} or {grey.shape[: 2]}")
+    return grey
 
 
 def rotate(path: str) -> np.ndarray:
     """
-    Load image, crop a region, convert to grayscale, rotate and display.
+    Load image, crop a region, convert to greyscale, rotate and display.
     """
     try:
         arr = ft_load(path)
@@ -28,12 +28,12 @@ def rotate(path: str) -> np.ndarray:
         if slicedImage.size == 0:
             print("Error: Sliced region is empty.")
             return np.ndarray([])
-        gray = apply_gray_scale(slicedImage)
-        rotatedGray = gray.transpose(1, 0, 2)[::-1]
-        print(rotatedGray)
-        plt.imshow(rotatedGray, cmap='gray')
+        grey = apply_grey_scale(slicedImage)
+        rotatedgrey = grey.transpose(1, 0, 2)[::-1]
+        print(rotatedgrey)
+        plt.imshow(rotatedgrey, cmap='grey')
         plt.show()
-        return rotatedGray
+        return rotatedgrey
     except Exception as e:
         print(f"Error: {e}")
 

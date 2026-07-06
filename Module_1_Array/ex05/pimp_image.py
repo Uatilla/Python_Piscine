@@ -70,14 +70,14 @@ def ft_blue(array) -> array:
 
 def ft_grey(array) -> array:
     """
-    Display the image in a gray scale.
+    Display the image in a grey scale.
     """
-    gray_arr = np.dot(array[..., :3], [0.2989, 0.5870, 0.1140])
-    gray_arr = gray_arr.astype(np.uint8)
-    gray_arr = gray_arr[:, :, np.newaxis]
-    plt.imshow(gray_arr, cmap='grey')
+    grey_arr = np.dot(array[..., :3], [0.2989, 0.5870, 0.1140])
+    grey_arr = grey_arr.astype(np.uint8)
+    grey_arr = grey_arr[:, :, np.newaxis]
+    plt.imshow(grey_arr, cmap='grey')
     plt.show()
-    return gray_arr
+    return grey_arr
 
 
 def main():
