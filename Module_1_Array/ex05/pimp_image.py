@@ -11,7 +11,7 @@ def render_image(array: np.ndarray) -> None:
 
 
 def ft_invert(array) -> array:
-    """Invert the colors of the image."""
+    """Inverts the color of the image received."""
     try:
         if array.size == 0:
             print("Error: Failed to load the image")
