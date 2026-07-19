@@ -2,6 +2,7 @@ import sys
 sys.tracebacklimit = 0
 
 if (len(sys.argv) == 1):
+    print()
     sys.exit(1)
 elif (len(sys.argv) > 2):
     raise AssertionError("more than one argument is provided") from None
