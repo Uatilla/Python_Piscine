@@ -82,7 +82,7 @@ def main():
     print(Cersei.__str__)
     print(Cersei.is_alive)
     print("---")
-    Jai = Lannister.create_lannister("Jaine", True)
+    Jai = Lannister.create_lannister("Jai", True)
     print(f"Nm: {Jai.first_name, type(Jai).__name__}, Alv: {Jai.is_alive}")
 
 
