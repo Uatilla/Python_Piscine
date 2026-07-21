@@ -22,6 +22,7 @@ class Stark(Character):
 
 
 def main():
+    """Init of the code."""
     Ned = Stark("Ned")
     print(Ned.__dict__)
     print(Ned.is_alive)
