@@ -17,3 +17,16 @@ class calculator():
         """List subtraction of its elements."""
         res = [a - b for a, b in zip(V1, V2)]
         print("Sous Vector is: [" + ", ".join(f"{x:.1f}" for x in res) + "]")
+
+
+def main():
+    """Init of the code."""
+    a = [5, 10, 2]
+    b = [2, 4, 3]
+    calculator.dotproduct(a, b)
+    calculator.add_vec(a, b)
+    calculator.sous_vec(a, b)
+
+
+if __name__ == "__main__":
+    main()
